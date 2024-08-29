@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.scss'
 import { usersService } from '@/services/user.service'
 import { GetServerSideProps } from 'next'
+import { AiDisclaimer } from '@cc/cc-common-ai-components'
 
 const Home = ({ data }: { data: any[] }) => {
   return (
@@ -14,24 +15,8 @@ const Home = ({ data }: { data: any[] }) => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          {data?.map((item, index) => {
-            return (
-              <a href="https://nextjs.org/docs" className={styles.card} key={index}>
-                <h2>{item.name}</h2>
-                <p>{item.email}</p>
-              </a>
-            )
-          })}
-        </div>
+        <h1 className={styles.title}>CC components try</h1>
+        <AiDisclaimer open={true} />
       </main>
 
       <footer className={styles.footer}>
